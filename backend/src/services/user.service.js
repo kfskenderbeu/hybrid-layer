@@ -32,4 +32,8 @@ export const userService = {
   findById: async (id) => {
     return users.find(u => u.id === id);
   },
+  getAll: async () => {
+    return users.map(u => ({ id: u.id, email: u.email }));
+},
+
 };
